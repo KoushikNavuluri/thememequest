@@ -4,10 +4,8 @@ A production-ready REST API for generating AI-powered memes using SuperMeme AI. 
 
 ## ✨ Features
 
-- 🤖 **AI-Powered Meme Generation**: Uses SuperMeme AI for high-quality meme creation
+- 🤖 **AI-Powered Meme Generation**: Uses AI for high-quality meme creation
 - 🔗 **Direct Image URLs**: Get HTTP URLs for immediate image access
-- 🔐 **Smart Token Management**: Automatic token generation and persistence
-- 📧 **Temporary Email Integration**: Seamless OTP verification process
 - 🎨 **Advanced Image Processing**: Text rendering with stroke effects and PIL
 - 🚀 **FastAPI Backend**: Modern, fast, and well-documented API
 - 🔄 **Automatic Retries**: Robust error handling and recovery
@@ -23,7 +21,7 @@ A production-ready REST API for generating AI-powered memes using SuperMeme AI. 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/thememequest.git
+git clone https://github.com/koushiknavuluri/thememequest.git
 cd thememequest
 ```
 
@@ -367,12 +365,6 @@ python test_api.py
 
 ## 🔧 Key Features & Implementation
 
-### Automatic Token Management
-- Generates temporary email addresses using Mail.tm
-- Handles OTP verification automatically
-- Stores JWT tokens securely with base64 encoding
-- Auto-refreshes expired tokens
-
 ### Image Processing Pipeline
 - Downloads base images from SuperMeme CDN
 - Applies text captions with PIL (Python Imaging Library)
@@ -384,7 +376,7 @@ python test_api.py
 - **`count`**: Number of memes generated
 - **`meme_list`**: Array of direct HTTP URLs for immediate access
 - **`generated_files`**: Detailed file information with paths and URLs
-- **`memes`**: Raw meme data from SuperMeme AI with caption coordinates
+- **`memes`**: Raw meme data from AI with caption coordinates
 
 ### Error Handling & Validation
 - Pydantic v2 field validators for robust data validation
@@ -398,7 +390,7 @@ The API includes comprehensive error handling:
 
 - **400 Bad Request**: Invalid input parameters or validation errors
 - **500 Internal Server Error**: Unexpected server errors or processing failures
-- **503 Service Unavailable**: SuperMeme AI service issues or token problems
+- **503 Service Unavailable**:  AI service issues or token problems
 
 All errors return a consistent format:
 
@@ -586,7 +578,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- [SuperMeme AI](https://supermeme.ai) for the powerful meme generation service
 - [FastAPI](https://fastapi.tiangolo.com/) for the excellent web framework
 - [Mail.tm](https://mail.tm) for temporary email services
 - [Pydantic](https://pydantic.dev/) for data validation
@@ -604,7 +595,7 @@ If you encounter any issues or have questions:
 
 ## 📈 Performance
 
-- **Generation Speed**: ~24 seconds for 16 high-quality memes
+- **Generation Speed**: ~10 seconds for 16 high-quality memes
 - **Concurrent Requests**: Supports multiple simultaneous requests
 - **Memory Usage**: Efficient image processing with PIL
 - **Storage**: Organized file system with timestamped directories
